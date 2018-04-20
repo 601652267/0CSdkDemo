@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    [[[AXBSDK alloc] init] apiKeyWithKey:@"" amapKey:@""];
+    [[[AXBSDK alloc] init] apiKeyWithKey:@"6649E047900DF81965E618E0E3C7F960" amapKey:@""];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
