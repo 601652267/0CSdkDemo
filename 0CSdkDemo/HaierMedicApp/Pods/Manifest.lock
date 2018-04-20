@@ -1,0 +1,76 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AMap3DMap (5.3.0):
+    - AMapFoundation (~> 1.3)
+  - AMapFoundation (1.4.3)
+  - AMapSearch (5.3.0):
+    - AMapFoundation (~> 1.2)
+  - Bugly (2.5.0)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.5.0):
+    - GoogleMaps/Base (= 2.5.0)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.15.1)
+  - MQTTClient (0.10.1):
+    - MQTTClient/Core (= 0.10.1)
+  - MQTTClient/Core (0.10.1):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.10.1):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.10.1)
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AMap3DMap (~> 5.3.0)
+  - AMapSearch (~> 5.3.0)
+  - Bugly
+  - FMDB (~> 2.6.2)
+  - GoogleMaps (~> 2.5.0)
+  - GooglePlaces
+  - MBProgressHUD (~> 1.0.0)
+  - MJRefresh (~> 3.1.12)
+  - MQTTClient
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AMap3DMap: 0614b5b7ed7a8b69f1d9ba7bc40ce30362497dc5
+  AMapFoundation: 973682cfe60b92efd73a8ef8f1144fa0fa8e1296
+  AMapSearch: beb01c6b2e7be18fb4898e97162fedf144420c6f
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  MQTTClient: a0f16ceec50bf80f606c37966c0b7fa8d9c9e739
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+
+PODFILE CHECKSUM: d3e834d0fd76b86827976c4de950b4bf9e7bbb20
+
+COCOAPODS: 1.2.1

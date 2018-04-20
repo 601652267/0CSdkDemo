@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4ED4FD520898EAC006E37D4 /* anXingBao.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4ED4FD220898EAB006E37D4 /* anXingBao.bundle */; };
+		B4ED4FD620898EAC006E37D4 /* EBBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */; };
+		B4ED4FDA20898FA6006E37D4 /* anXingBaoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FD820898F24006E37D4 /* anXingBaoSDK.framework */; };
+		B4ED4FDB20898FA6006E37D4 /* anXingBaoSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FD820898F24006E37D4 /* anXingBaoSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4ED4FDF20899048006E37D4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FDE20899048006E37D4 /* Charts.framework */; };
+		B4ED4FE020899048006E37D4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FDE20899048006E37D4 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B4FBDDFE20898901005C5F0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FBDDFD20898901005C5F0C /* AppDelegate.m */; };
+		B4FBDE0120898901005C5F0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FBDE0020898901005C5F0C /* ViewController.m */; };
+		B4FBDE0420898901005C5F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FBDE0220898901005C5F0C /* Main.storyboard */; };
+		B4FBDE0620898901005C5F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4FBDE0520898901005C5F0C /* Assets.xcassets */; };
+		B4FBDE0920898901005C5F0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FBDE0720898901005C5F0C /* LaunchScreen.storyboard */; };
+		B4FBDE0C20898901005C5F0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FBDE0B20898901005C5F0C /* main.m */; };
+		B4FBDE1620898901005C5F0C /* HaierMedicAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FBDE1520898901005C5F0C /* HaierMedicAppTests.m */; };
+		B4FBDE2120898901005C5F0C /* HaierMedicAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FBDE2020898901005C5F0C /* HaierMedicAppUITests.m */; };
+		B4FBE3F8208989D7005C5F0C /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBE3F7208989D7005C5F0C /* test.swift */; };
+		F6ED6D3FBD126E890EA9CF32 /* Pods_HaierMedicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497B824A8A89088388F312F5 /* Pods_HaierMedicApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4FBDE1220898901005C5F0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4FBDDF120898900005C5F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4FBDDF820898900005C5F0C;
+			remoteInfo = HaierMedicApp;
+		};
+		B4FBDE1D20898901005C5F0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4FBDDF120898900005C5F0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4FBDDF820898900005C5F0C;
+			remoteInfo = HaierMedicApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B4ED4FD020898E16006E37D4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4ED4FDB20898FA6006E37D4 /* anXingBaoSDK.framework in Embed Frameworks */,
+				B4ED4FE020899048006E37D4 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		497B824A8A89088388F312F5 /* Pods_HaierMedicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaierMedicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E029BAB106CE35EC5D3FDE8 /* Pods-HaierMedicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaierMedicApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HaierMedicApp/Pods-HaierMedicApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B4ED4FD220898EAB006E37D4 /* anXingBao.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = anXingBao.bundle; sourceTree = "<group>"; };
+		B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EBBannerView.xib; sourceTree = "<group>"; };
+		B4ED4FD820898F24006E37D4 /* anXingBaoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = anXingBaoSDK.framework; sourceTree = "<group>"; };
+		B4ED4FDE20899048006E37D4 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4FBDDF920898900005C5F0C /* HaierMedicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaierMedicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4FBDDFC20898901005C5F0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B4FBDDFD20898901005C5F0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B4FBDDFF20898901005C5F0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B4FBDE0020898901005C5F0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B4FBDE0320898901005C5F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4FBDE0520898901005C5F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4FBDE0820898901005C5F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4FBDE0A20898901005C5F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4FBDE0B20898901005C5F0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4FBDE1120898901005C5F0C /* HaierMedicAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaierMedicAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4FBDE1520898901005C5F0C /* HaierMedicAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HaierMedicAppTests.m; sourceTree = "<group>"; };
+		B4FBDE1720898901005C5F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4FBDE1C20898901005C5F0C /* HaierMedicAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaierMedicAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4FBDE2020898901005C5F0C /* HaierMedicAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HaierMedicAppUITests.m; sourceTree = "<group>"; };
+		B4FBDE2220898901005C5F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4FBE3F6208989D7005C5F0C /* HaierMedicApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HaierMedicApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		B4FBE3F7208989D7005C5F0C /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		E5A05EB11D550FE7DC2F15E5 /* Pods-HaierMedicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaierMedicApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HaierMedicApp/Pods-HaierMedicApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4FBDDF620898900005C5F0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4ED4FDF20899048006E37D4 /* Charts.framework in Frameworks */,
+				F6ED6D3FBD126E890EA9CF32 /* Pods_HaierMedicApp.framework in Frameworks */,
+				B4ED4FDA20898FA6006E37D4 /* anXingBaoSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FBDE0E20898901005C5F0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FBDE1920898901005C5F0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		698CC8A8490E6D3F7B4FAF7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E029BAB106CE35EC5D3FDE8 /* Pods-HaierMedicApp.debug.xcconfig */,
+				E5A05EB11D550FE7DC2F15E5 /* Pods-HaierMedicApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B4FBDDF020898900005C5F0C = {
+			isa = PBXGroup;
+			children = (
+				B4ED4FDE20899048006E37D4 /* Charts.framework */,
+				B4FBDDFB20898900005C5F0C /* HaierMedicApp */,
+				B4FBDE1420898901005C5F0C /* HaierMedicAppTests */,
+				B4FBDE1F20898901005C5F0C /* HaierMedicAppUITests */,
+				B4FBDDFA20898900005C5F0C /* Products */,
+				698CC8A8490E6D3F7B4FAF7C /* Pods */,
+				D1CAAA3B689B122686F53C58 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B4FBDDFA20898900005C5F0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4FBDDF920898900005C5F0C /* HaierMedicApp.app */,
+				B4FBDE1120898901005C5F0C /* HaierMedicAppTests.xctest */,
+				B4FBDE1C20898901005C5F0C /* HaierMedicAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4FBDDFB20898900005C5F0C /* HaierMedicApp */ = {
+			isa = PBXGroup;
+			children = (
+				B4FBDDFC20898901005C5F0C /* AppDelegate.h */,
+				B4ED4FD820898F24006E37D4 /* anXingBaoSDK.framework */,
+				B4ED4FD220898EAB006E37D4 /* anXingBao.bundle */,
+				B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */,
+				B4FBDDFD20898901005C5F0C /* AppDelegate.m */,
+				B4FBDDFF20898901005C5F0C /* ViewController.h */,
+				B4FBDE0020898901005C5F0C /* ViewController.m */,
+				B4FBE3F7208989D7005C5F0C /* test.swift */,
+				B4FBDE0220898901005C5F0C /* Main.storyboard */,
+				B4FBDE0520898901005C5F0C /* Assets.xcassets */,
+				B4FBDE0720898901005C5F0C /* LaunchScreen.storyboard */,
+				B4FBDE0A20898901005C5F0C /* Info.plist */,
+				B4FBDE0B20898901005C5F0C /* main.m */,
+				B4FBE3F6208989D7005C5F0C /* HaierMedicApp-Bridging-Header.h */,
+			);
+			path = HaierMedicApp;
+			sourceTree = "<group>";
+		};
+		B4FBDE1420898901005C5F0C /* HaierMedicAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4FBDE1520898901005C5F0C /* HaierMedicAppTests.m */,
+				B4FBDE1720898901005C5F0C /* Info.plist */,
+			);
+			path = HaierMedicAppTests;
+			sourceTree = "<group>";
+		};
+		B4FBDE1F20898901005C5F0C /* HaierMedicAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4FBDE2020898901005C5F0C /* HaierMedicAppUITests.m */,
+				B4FBDE2220898901005C5F0C /* Info.plist */,
+			);
+			path = HaierMedicAppUITests;
+			sourceTree = "<group>";
+		};
+		D1CAAA3B689B122686F53C58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				497B824A8A89088388F312F5 /* Pods_HaierMedicApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4FBDDF820898900005C5F0C /* HaierMedicApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4FBDE2520898901005C5F0C /* Build configuration list for PBXNativeTarget "HaierMedicApp" */;
+			buildPhases = (
+				BF3A481EF7253AC28DA574DD /* [CP] Check Pods Manifest.lock */,
+				B4FBDDF520898900005C5F0C /* Sources */,
+				B4FBDDF620898900005C5F0C /* Frameworks */,
+				B4FBDDF720898900005C5F0C /* Resources */,
+				D96E8DE15B8A364AA9BC8404 /* [CP] Embed Pods Frameworks */,
+				65A96A0C5A4FD868AEE266CF /* [CP] Copy Pods Resources */,
+				B4ED4FD020898E16006E37D4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HaierMedicApp;
+			productName = HaierMedicApp;
+			productReference = B4FBDDF920898900005C5F0C /* HaierMedicApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4FBDE1020898901005C5F0C /* HaierMedicAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4FBDE2820898901005C5F0C /* Build configuration list for PBXNativeTarget "HaierMedicAppTests" */;
+			buildPhases = (
+				B4FBDE0D20898901005C5F0C /* Sources */,
+				B4FBDE0E20898901005C5F0C /* Frameworks */,
+				B4FBDE0F20898901005C5F0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4FBDE1320898901005C5F0C /* PBXTargetDependency */,
+			);
+			name = HaierMedicAppTests;
+			productName = HaierMedicAppTests;
+			productReference = B4FBDE1120898901005C5F0C /* HaierMedicAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B4FBDE1B20898901005C5F0C /* HaierMedicAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4FBDE2B20898901005C5F0C /* Build configuration list for PBXNativeTarget "HaierMedicAppUITests" */;
+			buildPhases = (
+				B4FBDE1820898901005C5F0C /* Sources */,
+				B4FBDE1920898901005C5F0C /* Frameworks */,
+				B4FBDE1A20898901005C5F0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4FBDE1E20898901005C5F0C /* PBXTargetDependency */,
+			);
+			name = HaierMedicAppUITests;
+			productName = HaierMedicAppUITests;
+			productReference = B4FBDE1C20898901005C5F0C /* HaierMedicAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4FBDDF120898900005C5F0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "朱海铭";
+				TargetAttributes = {
+					B4FBDDF820898900005C5F0C = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					B4FBDE1020898901005C5F0C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B4FBDDF820898900005C5F0C;
+					};
+					B4FBDE1B20898901005C5F0C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B4FBDDF820898900005C5F0C;
+					};
+				};
+			};
+			buildConfigurationList = B4FBDDF420898900005C5F0C /* Build configuration list for PBXProject "HaierMedicApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+				ca,
+				cs,
+				da,
+				de,
+				el,
+				en_GB,
+				es,
+				fi,
+				fr,
+				he,
+				hr,
+				hu,
+				id,
+				it,
+				ja,
+				ko,
+				ms,
+				nb,
+				nl,
+				pl,
+				pt,
+				pt_PT,
+				ro,
+				ru,
+				sk,
+				sv,
+				th,
+				tr,
+				uk,
+				vi,
+				zh_CN,
+				zh_TW,
+				en_AU,
+				en_IN,
+				es_419,
+				es_MX,
+				fr_CA,
+				hi,
+				pt_BR,
+				zh_HK,
+			);
+			mainGroup = B4FBDDF020898900005C5F0C;
+			productRefGroup = B4FBDDFA20898900005C5F0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4FBDDF820898900005C5F0C /* HaierMedicApp */,
+				B4FBDE1020898901005C5F0C /* HaierMedicAppTests */,
+				B4FBDE1B20898901005C5F0C /* HaierMedicAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4FBDDF720898900005C5F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4ED4FD620898EAC006E37D4 /* EBBannerView.xib in Resources */,
+				B4FBDE0920898901005C5F0C /* LaunchScreen.storyboard in Resources */,
+				B4FBDE0620898901005C5F0C /* Assets.xcassets in Resources */,
+				B4FBDE0420898901005C5F0C /* Main.storyboard in Resources */,
+				B4ED4FD520898EAC006E37D4 /* anXingBao.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FBDE0F20898901005C5F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FBDE1A20898901005C5F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65A96A0C5A4FD868AEE266CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HaierMedicApp/Pods-HaierMedicApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF3A481EF7253AC28DA574DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D96E8DE15B8A364AA9BC8404 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HaierMedicApp/Pods-HaierMedicApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4FBDDF520898900005C5F0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FBDE0120898901005C5F0C /* ViewController.m in Sources */,
+				B4FBE3F8208989D7005C5F0C /* test.swift in Sources */,
+				B4FBDE0C20898901005C5F0C /* main.m in Sources */,
+				B4FBDDFE20898901005C5F0C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FBDE0D20898901005C5F0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FBDE1620898901005C5F0C /* HaierMedicAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FBDE1820898901005C5F0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FBDE2120898901005C5F0C /* HaierMedicAppUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4FBDE1320898901005C5F0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4FBDDF820898900005C5F0C /* HaierMedicApp */;
+			targetProxy = B4FBDE1220898901005C5F0C /* PBXContainerItemProxy */;
+		};
+		B4FBDE1E20898901005C5F0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4FBDDF820898900005C5F0C /* HaierMedicApp */;
+			targetProxy = B4FBDE1D20898901005C5F0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4FBDE0220898901005C5F0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4FBDE0320898901005C5F0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B4FBDE0720898901005C5F0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4FBDE0820898901005C5F0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4FBDE2320898901005C5F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B4FBDE2420898901005C5F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4FBDE2620898901005C5F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E029BAB106CE35EC5D3FDE8 /* Pods-HaierMedicApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4HRT297EH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/Release-iphoneos",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/Release-iphonesimulator",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/AMap3DMap",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/AMapFoundation",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/AMapSearch",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/Bugly",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/GoogleMaps/Base/Frameworks",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/GoogleMaps/Maps/Frameworks",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/GooglePlaces/Frameworks",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/swiftSdkDemo",
+					"$(PROJECT_DIR)/HaierMedicApp",
+				);
+				INFOPLIST_FILE = HaierMedicApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.casnetvi.HaierMedicApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HaierMedicApp/HaierMedicApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4FBDE2720898901005C5F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5A05EB11D550FE7DC2F15E5 /* Pods-HaierMedicApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4HRT297EH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/Release-iphoneos",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/Release-iphonesimulator",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/AMap3DMap",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/AMapFoundation",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/AMapSearch",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/Bugly",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/GoogleMaps/Base/Frameworks",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/GoogleMaps/Maps/Frameworks",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/Pods/GooglePlaces/Frameworks",
+					"$(PROJECT_DIR)/myAXB/axbSDK/sdk/swiftSdkDemo/swiftSdkDemo",
+					"$(PROJECT_DIR)/HaierMedicApp",
+				);
+				INFOPLIST_FILE = HaierMedicApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.casnetvi.HaierMedicApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HaierMedicApp/HaierMedicApp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B4FBDE2920898901005C5F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4HRT297EH;
+				INFOPLIST_FILE = HaierMedicAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.casnetvi.HaierMedicAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HaierMedicApp.app/HaierMedicApp";
+			};
+			name = Debug;
+		};
+		B4FBDE2A20898901005C5F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4HRT297EH;
+				INFOPLIST_FILE = HaierMedicAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.casnetvi.HaierMedicAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HaierMedicApp.app/HaierMedicApp";
+			};
+			name = Release;
+		};
+		B4FBDE2C20898901005C5F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4HRT297EH;
+				INFOPLIST_FILE = HaierMedicAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.casnetvi.HaierMedicAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HaierMedicApp;
+			};
+			name = Debug;
+		};
+		B4FBDE2D20898901005C5F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F4HRT297EH;
+				INFOPLIST_FILE = HaierMedicAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.casnetvi.HaierMedicAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HaierMedicApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4FBDDF420898900005C5F0C /* Build configuration list for PBXProject "HaierMedicApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FBDE2320898901005C5F0C /* Debug */,
+				B4FBDE2420898901005C5F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4FBDE2520898901005C5F0C /* Build configuration list for PBXNativeTarget "HaierMedicApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FBDE2620898901005C5F0C /* Debug */,
+				B4FBDE2720898901005C5F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4FBDE2820898901005C5F0C /* Build configuration list for PBXNativeTarget "HaierMedicAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FBDE2920898901005C5F0C /* Debug */,
+				B4FBDE2A20898901005C5F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4FBDE2B20898901005C5F0C /* Build configuration list for PBXNativeTarget "HaierMedicAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FBDE2C20898901005C5F0C /* Debug */,
+				B4FBDE2D20898901005C5F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4FBDDF120898900005C5F0C /* Project object */;
+}
