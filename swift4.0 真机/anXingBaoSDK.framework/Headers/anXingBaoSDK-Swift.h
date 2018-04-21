@@ -249,17 +249,6 @@ SWIFT_CLASS("_TtC12anXingBaoSDK19LargeValueFormatter")
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC12anXingBaoSDK19LoginViewController")
-@interface LoginViewController : UIViewController
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 
 
 

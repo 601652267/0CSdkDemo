@@ -1,0 +1,11 @@
+framework module anXingBaoSDK {
+  umbrella header "anXingBaoSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module anXingBaoSDK.Swift {
+    header "anXingBaoSDK-Swift.h"
+    requires objc
+}
