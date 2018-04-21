@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <anXingBaoSDK/anXingBaoSDK-Swift.h>
+#import "CustomViewController.h"
 
 @interface ViewController ()
 
@@ -23,7 +24,7 @@
 }
 
 - (IBAction)login:(id)sender {
-    [self present];
+    [self push];
 }
 
 
@@ -33,9 +34,16 @@
 }
 
 
-- (void)present {
+- (void)push {
     AXBSDK *sdk = [[AXBSDK alloc] init];
-    [sdk loginWithUsername:@"yukari" pass:@"198611" controller:self faild:^(NSString * msg, NSString * detail) {
+    CustomViewController *vc = [[CustomViewController alloc] init];
+    __weak CustomViewController *weakVC = vc;
+    __weak ViewController *weakSelf = self;
+    sdk.deviceListBlock = ^(UIViewController * deviceVC) {
+        [weakVC setSDKDeviceView:deviceVC];
+        [weakSelf.navigationController pushViewController:weakVC animated:YES];
+    };
+    [sdk loginWithUsername:@"yukari" pass:@"198611" controller:vc faild:^(NSString * msg, NSString * detail) {
 
     } successBlock:^{
 
