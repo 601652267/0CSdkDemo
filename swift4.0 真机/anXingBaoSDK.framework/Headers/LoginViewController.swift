@@ -36,7 +36,7 @@ public class LoginViewController: UIViewController {
         UserDefaults.standard.synchronize();
     }
     
-    @objc func login() {
+    func login() {
         LoginViewController.setAppLanguage();
 //        loginTool.login(username: "", pass: "", successBlock: {
 //            self.PushDevice(animation: true);

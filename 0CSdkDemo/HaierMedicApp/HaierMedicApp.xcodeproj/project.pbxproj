@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4436FAB208AC95F00C21EC8 /* anXingBaoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4436FAA208AC95F00C21EC8 /* anXingBaoSDK.framework */; };
 		B4ED4FD620898EAC006E37D4 /* EBBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */; };
 		B4ED4FDF20899048006E37D4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FDE20899048006E37D4 /* Charts.framework */; };
 		B4ED4FE020899048006E37D4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FDE20899048006E37D4 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B4ED4FE82089DAB5006E37D4 /* anXingBaoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FE72089DAB5006E37D4 /* anXingBaoSDK.framework */; };
 		B4ED4FEA2089DB4C006E37D4 /* anXingBao.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4ED4FE92089DB4C006E37D4 /* anXingBao.bundle */; };
 		B4FBDDFE20898901005C5F0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FBDDFD20898901005C5F0C /* AppDelegate.m */; };
 		B4FBDE0120898901005C5F0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FBDE0020898901005C5F0C /* ViewController.m */; };
@@ -58,9 +58,9 @@
 /* Begin PBXFileReference section */
 		497B824A8A89088388F312F5 /* Pods_HaierMedicApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HaierMedicApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E029BAB106CE35EC5D3FDE8 /* Pods-HaierMedicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaierMedicApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HaierMedicApp/Pods-HaierMedicApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B4436FAA208AC95F00C21EC8 /* anXingBaoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = anXingBaoSDK.framework; sourceTree = "<group>"; };
 		B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EBBannerView.xib; sourceTree = "<group>"; };
 		B4ED4FDE20899048006E37D4 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4ED4FE72089DAB5006E37D4 /* anXingBaoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = anXingBaoSDK.framework; sourceTree = "<group>"; };
 		B4ED4FE92089DB4C006E37D4 /* anXingBao.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = anXingBao.bundle; sourceTree = "<group>"; };
 		B4FBDDF920898900005C5F0C /* HaierMedicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaierMedicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FBDDFC20898901005C5F0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4ED4FDF20899048006E37D4 /* Charts.framework in Frameworks */,
-				B4ED4FE82089DAB5006E37D4 /* anXingBaoSDK.framework in Frameworks */,
+				B4436FAB208AC95F00C21EC8 /* anXingBaoSDK.framework in Frameworks */,
 				F6ED6D3FBD126E890EA9CF32 /* Pods_HaierMedicApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +146,7 @@
 		B4FBDDFB20898900005C5F0C /* HaierMedicApp */ = {
 			isa = PBXGroup;
 			children = (
-				B4ED4FE72089DAB5006E37D4 /* anXingBaoSDK.framework */,
+				B4436FAA208AC95F00C21EC8 /* anXingBaoSDK.framework */,
 				B4FBDDFC20898901005C5F0C /* AppDelegate.h */,
 				B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */,
 				B4FBDDFD20898901005C5F0C /* AppDelegate.m */,
@@ -373,9 +373,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HaierMedicApp/Pods-HaierMedicApp-resources.sh",
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -388,13 +395,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HaierMedicApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D96E8DE15B8A364AA9BC8404 /* [CP] Embed Pods Frameworks */ = {
@@ -403,9 +413,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HaierMedicApp/Pods-HaierMedicApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MQTTClient/MQTTClient.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MQTTClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -585,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E029BAB106CE35EC5D3FDE8 /* Pods-HaierMedicApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -612,7 +636,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HaierMedicApp/HaierMedicApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -621,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E5A05EB11D550FE7DC2F15E5 /* Pods-HaierMedicApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -647,7 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.casnetvi.HaierMedicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HaierMedicApp/HaierMedicApp-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

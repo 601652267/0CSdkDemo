@@ -26,14 +26,14 @@ public class AXBSDK: NSObject {
     
     //MARK:-
     // MARK:验证key
-    @objc public func apiKey(key:String, amapKey:String) {
+    public func apiKey(key:String, amapKey:String) {
         loginTool.init().checkKey(key: key, amapKey: amapKey);
     }
     //MARK:-
     
     //MARK:-
     // MARK:验证key
-    @objc public func bindDevice(controller:UIViewController) {
+    public func bindDevice(controller:UIViewController) {
         if UserManager.share().isLogin == false {
             print("请先登录")
             return;
@@ -54,7 +54,7 @@ public class AXBSDK: NSObject {
     
     //MARK:-
     // MARK:退出登录
-    @objc public func loginOut() {
+    public func loginOut() {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: loginOutTopic), object: nil);
     }
 
@@ -63,7 +63,7 @@ public class AXBSDK: NSObject {
     //MARK:-
     //MARK:登录
     // 登录调用接口 直接进入设备列表controller
-    @objc public func login(username:String, pass:String, controller:UIViewController, faild faildBlock:@escaping (String, String) -> Void, successBlock:@escaping () -> Void) {
+    public func login(username:String, pass:String, controller:UIViewController, faild faildBlock:@escaping (String, String) -> Void, successBlock:@escaping () -> Void) {
         weak var weakVC = controller;
         self.controller = {
             return weakVC!;
@@ -130,7 +130,7 @@ public class AXBSDK: NSObject {
         }
     }
     
-    @objc public func sendmsg(msg:String) {
+    public func sendmsg(msg:String) {
         let alertData = NSMutableDictionary();
         alertData.setValue(NSMutableDictionary.init(object: msg, forKey: "alert" as NSCopying), forKey: "aps")
         EBForeNotification.handleRemoteNotification(alertData as! [AnyHashable : Any], soundID: 1312, isIos10: false);

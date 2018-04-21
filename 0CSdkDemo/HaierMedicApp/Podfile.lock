@@ -57,6 +57,21 @@ DEPENDENCIES:
   - MQTTClient
   - SDWebImage
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AMap3DMap
+    - AMapFoundation
+    - AMapSearch
+    - Bugly
+    - FMDB
+    - GoogleMaps
+    - GooglePlaces
+    - MBProgressHUD
+    - MJRefresh
+    - MQTTClient
+    - SDWebImage
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AMap3DMap: 0614b5b7ed7a8b69f1d9ba7bc40ce30362497dc5
@@ -73,4 +88,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d3e834d0fd76b86827976c4de950b4bf9e7bbb20
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.0
