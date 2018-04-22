@@ -40,7 +40,7 @@
     __weak CustomViewController *weakVC = vc;
     __weak ViewController *weakSelf = self;
     sdk.deviceListBlock = ^(UIViewController * deviceVC) {
-        [weakVC setSDKDeviceView:deviceVC];
+        [weakVC setSDKDeviceView:deviceVC height:300];
         [weakSelf.navigationController pushViewController:weakVC animated:YES];
     };
     [sdk loginWithUsername:@"yukari" pass:@"198611" controller:vc faild:^(NSString * msg, NSString * detail) {

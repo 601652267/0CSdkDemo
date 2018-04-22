@@ -10,7 +10,7 @@ import UIKit
 
 public class AXBSDK: NSObject {
 
-    public var controller:(()->UIViewController)? = nil; // 进入设备列表的控制器
+    var controller:UIViewController? = nil; // 进入设备列表的控制器
     public var loginSuccess:(()->Void)? = nil; // 登录成功
     public var loginFaild:((String, String)->Void)? = nil; // 登录失败
     public var tokenFaild:(()->Void)? = nil; // token验证失效
@@ -64,10 +64,7 @@ public class AXBSDK: NSObject {
     //MARK:登录
     // 登录调用接口 直接进入设备列表controller
     public func login(username:String, pass:String, controller:UIViewController, faild faildBlock:@escaping (String, String) -> Void, successBlock:@escaping () -> Void) {
-        weak var weakVC = controller;
-        self.controller = {
-            return weakVC!;
-        }
+        self.controller = controller;
         UserManager.share().getUserInfo(notOnline: {
             loginTool.login(username: username, pass: pass, successBlock: {
                 self.successLogin();
@@ -76,7 +73,7 @@ public class AXBSDK: NSObject {
             }
         }, login: {
             UserManager.share().style = .withOutLogin;
-            self.PushDevice(controller: weakVC!);
+            self.PushDevice(controller: controller);
         });
         
     }    
@@ -86,8 +83,7 @@ public class AXBSDK: NSObject {
             loginSuccess!();
         }
         if controller != nil {
-            let vc = controller!();
-            PushDevice(controller: vc);
+            PushDevice(controller: controller!);
         }
     }
     

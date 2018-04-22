@@ -38,6 +38,7 @@ FOUNDATION_EXPORT const unsigned char anXingBaoSDKVersionString[];
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <anXingBaoSDK/oc.h>
 #import <anXingBaoSDK/MyImageView.h>
+#import <anXingBaoSDK/EasyShowView.h>
 
 #import <anXingBaoSDK/MyImageView.h>
 #import <anXingBaoSDK/batvalView.h>

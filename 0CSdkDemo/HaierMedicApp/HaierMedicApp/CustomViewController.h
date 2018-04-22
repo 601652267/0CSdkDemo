@@ -10,6 +10,6 @@
 
 @interface CustomViewController : UIViewController
 
-- (void)setSDKDeviceView:(UIViewController *)deviceVC;
+- (void)setSDKDeviceView:(UIViewController *)deviceVC height:(CGFloat)height;
 
 @end

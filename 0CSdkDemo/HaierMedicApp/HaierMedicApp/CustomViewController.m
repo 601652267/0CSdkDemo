@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong)UIView *customView;
 
+@property (nonatomic)CGFloat height;
+
 @end
 
 @implementation CustomViewController
@@ -36,10 +38,10 @@
 
 - (UIView *)customView {
     if (_customView == nil) {
-        CGFloat pointx = 20;
+        CGFloat pointx = 0;
         CGFloat pointy = 70;
         CGFloat width = self.view.frame.size.width - 2 * pointx;
-        CGFloat height = 300;
+        CGFloat height = self.height;
         _customView = [[UIView alloc] initWithFrame:CGRectMake(pointx, pointy, width, height)];
         _customView.backgroundColor = [UIColor blueColor];
         [self.view addSubview:_customView];
@@ -47,7 +49,8 @@
     return _customView;
 }
 
-- (void)setSDKDeviceView:(UIViewController *)deviceVC {
+- (void)setSDKDeviceView:(UIViewController *)deviceVC height:(CGFloat)height {
+    self.height = height;
     self.view.backgroundColor = [UIColor whiteColor];
     [self addChildViewController:deviceVC];
     deviceVC.view.tag = 10000; // 给其一个tag 方便寻找

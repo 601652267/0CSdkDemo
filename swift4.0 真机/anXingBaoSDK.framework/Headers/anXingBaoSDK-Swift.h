@@ -187,7 +187,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC12anXingBaoSDK6AXBSDK")
 @interface AXBSDK : NSObject
-@property (nonatomic, copy) UIViewController * _Nonnull (^ _Nullable controller)(void);
 @property (nonatomic, copy) void (^ _Nullable loginSuccess)(void);
 @property (nonatomic, copy) void (^ _Nullable loginFaild)(NSString * _Nonnull, NSString * _Nonnull);
 @property (nonatomic, copy) void (^ _Nullable tokenFaild)(void);
