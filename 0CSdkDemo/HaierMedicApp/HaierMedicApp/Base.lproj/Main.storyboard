@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-793" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CustomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e3I-1D-aXp"/>
                         <viewControllerLayoutGuide type="bottom" id="55z-Xp-8iy"/>
@@ -37,22 +36,7 @@
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVH-N8-bcw">
-                                <rect key="frame" x="26" y="164" width="323" height="30"/>
-                                <color key="backgroundColor" red="0.6840382379973261" green="1" blue="0.55657768508574068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="login"/>
-                                <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJ2-en-ig2"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="gVH-N8-bcw" firstAttribute="top" secondItem="e3I-1D-aXp" secondAttribute="bottom" constant="100" id="8dY-tv-vdp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gVH-N8-bcw" secondAttribute="trailing" constant="10" id="RVd-ih-Jq1"/>
-                            <constraint firstItem="gVH-N8-bcw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Rm5-tE-N1i"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="amo-Bd-slw"/>
                 </viewController>

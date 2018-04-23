@@ -22,18 +22,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[[AXBSDK alloc] init] apiKeyWithKey:@"6649E047900DF81965E618E0E3C7F960" amapKey:@""];
     [self setNavigationStyle];
+    [self login];
 }
 
 - (void)setNavigationStyle {
-    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:@"back" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
-    self.navigationItem.leftBarButtonItem = left;
+    self.title = @"我是首页";
 }
 
-- (void)back {
+- (void)login {
     AXBSDK *sdk = [[AXBSDK alloc] init];
-    [sdk loginOut];
-    [self.navigationController popViewControllerAnimated:true];
+    __weak CustomViewController *weakSelf = self;
+    sdk.deviceListBlock = ^(UIViewController * deviceVC) {
+        [weakSelf setSDKDeviceView:deviceVC height:300];
+    };
+    [sdk loginWithUsername:@"yukari" pass:@"198611" controller:self faild:^(NSString * msg, NSString * detail) {
+        
+    } successBlock:^{
+        
+    }];
+
 }
 
 - (UIView *)customView {

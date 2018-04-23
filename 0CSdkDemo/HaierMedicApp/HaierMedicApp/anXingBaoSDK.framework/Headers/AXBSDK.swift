@@ -73,18 +73,15 @@ public class AXBSDK: NSObject {
             }
         }, login: {
             UserManager.share().style = .withOutLogin;
-            self.PushDevice(controller: controller);
         });
-        
-    }    
+        self.PushDevice(controller: controller);
+    }
     // 成功登录
     func successLogin() {
         if loginSuccess != nil {
             loginSuccess!();
         }
-        if controller != nil {
-            PushDevice(controller: controller!);
-        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: frameworkLoad), object: nil);
     }
     
     // 登录失败
@@ -98,7 +95,6 @@ public class AXBSDK: NSObject {
     
     /* 进入设备主页面 */
     func PushDevice(controller:UIViewController) {
-        NotificationCenter.default.addObserver(self, selector: #selector(AXBTokenError), name: NSNotification.Name(rawValue: tokenError), object: nil);
         setAppLanguage();
         let device = DeviceListViewController.init(nibName: "DeviceListViewController", bundle: bundleTool.share().returnXibBundle());
         device.titleName = "";

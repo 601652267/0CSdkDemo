@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <anXingBaoSDK/anXingBaoSDK-Swift.h>
 #import "CustomViewController.h"
+#import "AFNetworking.h"
 
 @interface ViewController ()
 
@@ -20,18 +21,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [[[AXBSDK alloc] init] apiKeyWithKey:@"6649E047900DF81965E618E0E3C7F960" amapKey:@""];
-    
 }
 
-- (IBAction)login:(id)sender {
-    [self push];
-}
 
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
 }
+
+
 
 
 - (void)push {
