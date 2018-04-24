@@ -191,12 +191,15 @@ SWIFT_CLASS("_TtC12anXingBaoSDK6AXBSDK")
 @property (nonatomic, copy) void (^ _Nullable loginFaild)(NSString * _Nonnull, NSString * _Nonnull);
 @property (nonatomic, copy) void (^ _Nullable tokenFaild)(void);
 @property (nonatomic, copy) void (^ _Nullable deviceListBlock)(UIViewController * _Nonnull);
+@property (nonatomic, copy) void (^ _Nullable deviceBindBlock)(void);
+@property (nonatomic, copy) void (^ _Nullable deviceBindOverBlock)(void);
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)apiKeyWithKey:(NSString * _Nonnull)key amapKey:(NSString * _Nonnull)amapKey;
 - (void)bindDeviceWithController:(UIViewController * _Nonnull)controller;
 - (void)loginOut;
+- (void)loginWithUsername:(NSString * _Nonnull)username pass:(NSString * _Nonnull)pass faild:(void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull))faildBlock successBlock:(void (^ _Nonnull)(void))successBlock;
 - (void)loginWithUsername:(NSString * _Nonnull)username pass:(NSString * _Nonnull)pass controller:(UIViewController * _Nonnull)controller faild:(void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull))faildBlock successBlock:(void (^ _Nonnull)(void))successBlock;
 - (void)sendmsgWithMsg:(NSString * _Nonnull)msg;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class ChartAxisBase;

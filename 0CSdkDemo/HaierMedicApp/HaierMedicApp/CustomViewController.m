@@ -15,6 +15,8 @@
 
 @property (nonatomic)CGFloat height;
 
+@property (nonatomic, retain)AXBSDK *sdk;
+
 @end
 
 @implementation CustomViewController
@@ -22,22 +24,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[[AXBSDK alloc] init] apiKeyWithKey:@"6649E047900DF81965E618E0E3C7F960" amapKey:@""];
-    [self setNavigationStyle];
+    [self setsdk];
     [self login];
 }
 
-- (void)setNavigationStyle {
-    self.title = @"我是首页";
+- (void)setsdk {
+    self.sdk = [[AXBSDK alloc] init];
+    [self.sdk apiKeyWithKey:@"6649E047900DF81965E618E0E3C7F960" amapKey:@""];
+    __weak CustomViewController *weakSelf = self;
+    // 超过一台的绑定设备
+    self.sdk.deviceBindOverBlock = ^{
+        [weakSelf hiddenNavigationBind];
+    };
+    // 可以绑定设备的回调
+    self.sdk.deviceBindBlock = ^{
+        [weakSelf setNavigationBind];
+    };
+    // token 过期
+    self.sdk.tokenFaild = ^{
+        
+    };
+    // 登录失败
+    self.sdk.loginFaild = ^(NSString * msg, NSString * detailMsg) {
+        
+    };
+    // 登录成功
+    self.sdk.loginSuccess = ^{
+        
+    };
+    // 添加view
+    self.sdk.deviceListBlock = ^(UIViewController * deviceVC) {
+        [weakSelf setSDKDeviceView:deviceVC height:300];
+    };
+}
+
+- (void)setNavigationBind {
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"绑定" style:UIBarButtonItemStylePlain target:self action:@selector(bindDevice)];
+    self.navigationItem.rightBarButtonItem = right;
+}
+
+- (void)hiddenNavigationBind
+{
+    self.navigationItem.rightBarButtonItem = nil;
+}
+
+// 绑定设备
+- (void)bindDevice {
+    AXBSDK *sdk = [[AXBSDK alloc] init];
+    [sdk bindDeviceWithController:self];
 }
 
 - (void)login {
-    AXBSDK *sdk = [[AXBSDK alloc] init];
-    __weak CustomViewController *weakSelf = self;
-    sdk.deviceListBlock = ^(UIViewController * deviceVC) {
-        [weakSelf setSDKDeviceView:deviceVC height:300];
-    };
-    [sdk loginWithUsername:@"yukari" pass:@"198611" controller:self faild:^(NSString * msg, NSString * detail) {
+    [self.sdk loginWithUsername:@"yukari" pass:@"198611" controller:self faild:^(NSString * msg, NSString * detail) {
         
     } successBlock:^{
         

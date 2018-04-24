@@ -12,9 +12,8 @@
 		B4ED4FDF20899048006E37D4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FDE20899048006E37D4 /* Charts.framework */; };
 		B4ED4FE020899048006E37D4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FDE20899048006E37D4 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B4ED4FEA2089DB4C006E37D4 /* anXingBao.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4ED4FE92089DB4C006E37D4 /* anXingBao.bundle */; };
-		B4F9D4A9208ED19000FF452F /* anXingBaoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9D4A8208ED19000FF452F /* anXingBaoSDK.framework */; };
+		B4F9D4B5208F069C00FF452F /* anXingBaoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9D4B4208F069C00FF452F /* anXingBaoSDK.framework */; };
 		B4FBDDFE20898901005C5F0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FBDDFD20898901005C5F0C /* AppDelegate.m */; };
-		B4FBDE0120898901005C5F0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FBDE0020898901005C5F0C /* ViewController.m */; };
 		B4FBDE0420898901005C5F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FBDE0220898901005C5F0C /* Main.storyboard */; };
 		B4FBDE0620898901005C5F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4FBDE0520898901005C5F0C /* Assets.xcassets */; };
 		B4FBDE0920898901005C5F0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FBDE0720898901005C5F0C /* LaunchScreen.storyboard */; };
@@ -64,12 +63,10 @@
 		B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EBBannerView.xib; sourceTree = "<group>"; };
 		B4ED4FDE20899048006E37D4 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4ED4FE92089DB4C006E37D4 /* anXingBao.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = anXingBao.bundle; sourceTree = "<group>"; };
-		B4F9D4A8208ED19000FF452F /* anXingBaoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = anXingBaoSDK.framework; sourceTree = "<group>"; };
+		B4F9D4B4208F069C00FF452F /* anXingBaoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = anXingBaoSDK.framework; sourceTree = "<group>"; };
 		B4FBDDF920898900005C5F0C /* HaierMedicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaierMedicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FBDDFC20898901005C5F0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4FBDDFD20898901005C5F0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B4FBDDFF20898901005C5F0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B4FBDE0020898901005C5F0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B4FBDE0320898901005C5F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4FBDE0520898901005C5F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4FBDE0820898901005C5F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,7 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4ED4FDF20899048006E37D4 /* Charts.framework in Frameworks */,
-				B4F9D4A9208ED19000FF452F /* anXingBaoSDK.framework in Frameworks */,
+				B4F9D4B5208F069C00FF452F /* anXingBaoSDK.framework in Frameworks */,
 				F6ED6D3FBD126E890EA9CF32 /* Pods_HaierMedicApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,12 +146,10 @@
 		B4FBDDFB20898900005C5F0C /* HaierMedicApp */ = {
 			isa = PBXGroup;
 			children = (
-				B4F9D4A8208ED19000FF452F /* anXingBaoSDK.framework */,
+				B4F9D4B4208F069C00FF452F /* anXingBaoSDK.framework */,
 				B4FBDDFC20898901005C5F0C /* AppDelegate.h */,
 				B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */,
 				B4FBDDFD20898901005C5F0C /* AppDelegate.m */,
-				B4FBDDFF20898901005C5F0C /* ViewController.h */,
-				B4FBDE0020898901005C5F0C /* ViewController.m */,
 				B4153F38208B62D8006BA142 /* CustomViewController.h */,
 				B4153F39208B62D8006BA142 /* CustomViewController.m */,
 				B4FBE3F7208989D7005C5F0C /* test.swift */,
@@ -447,7 +442,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4FBDE0120898901005C5F0C /* ViewController.m in Sources */,
 				B4153F3A208B62D8006BA142 /* CustomViewController.m in Sources */,
 				B4FBE3F8208989D7005C5F0C /* test.swift in Sources */,
 				B4FBDE0C20898901005C5F0C /* main.m in Sources */,

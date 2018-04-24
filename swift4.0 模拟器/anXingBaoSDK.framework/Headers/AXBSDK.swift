@@ -15,9 +15,35 @@ public class AXBSDK: NSObject {
     public var loginFaild:((String, String)->Void)? = nil; // 登录失败
     public var tokenFaild:(()->Void)? = nil; // token验证失效
     public var deviceListBlock:((UIViewController)->Void)? = nil; // 返回设备列表的controller 可以将其嵌套到自己自定义的controller
+    public var deviceBindBlock:(()->Void)? = nil; // 可以绑定设备的回调
+    public var deviceBindOverBlock:(()->Void)? = nil; // 绑定设备数量过多的回调
+
+    public override init() {
+        super.init();
+        NotificationCenter.default.addObserver(self, selector: #selector(AXBTokenError), name: NSNotification.Name(rawValue: tokenError), object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(checkShouldBind), name: NSNotification.Name(rawValue: refreshDeviceList), object: nil);
+
+    }
+    
+    func checkShouldBind() {
+        FMDBHelp.share().getUserImeiList(resultBlock: { (arr) in
+            print("device list == \(arr)")
+            if arr.count > 0 {
+                if self.deviceBindOverBlock != nil {
+                    self.deviceBindOverBlock!();
+                }
+            } else {
+                if self.deviceBindBlock != nil {
+                    self.deviceBindBlock!();
+                }
+            }
+        }) {
+        }
+    }
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: tokenError), object: nil);
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: refreshDeviceList), object: nil);
         controller = nil;
         loginFaild = nil;
         loginSuccess = nil;
@@ -38,8 +64,22 @@ public class AXBSDK: NSObject {
             print("请先登录")
             return;
         }
+        FMDBHelp.share().getUserImeiList(resultBlock: { (arr) in
+            if arr.count > 0 {
+                print("绑定数量超过一台");
+                if self.deviceBindOverBlock != nil {
+                    self.deviceBindOverBlock!();
+                }
+                return;
+            } else {
+                
+            }
+        }) {
+            print("---请先登录---")
+        }
         let bind = AddNewDeviceViewController.init(nibName: "", bundle: bundleTool.share().returnXibBundle());
-        controller.navigationController?.pushViewController(bind, animated: true);
+        let navc = UINavigationController.init(rootViewController: bind);
+        controller.present(navc, animated: true, completion: nil);
     }
     //MARK:-
 
@@ -62,6 +102,15 @@ public class AXBSDK: NSObject {
     
     //MARK:-
     //MARK:登录
+    public func login(username:String, pass:String, faild faildBlock:@escaping (String, String) -> Void, successBlock:@escaping () -> Void) {
+        loginTool.login(username: username, pass: pass, successBlock: {
+            self.successLogin();
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: frameworkLoad), object: nil);
+        }) { (msg, detail) in
+            self.faildLogin(msg: msg, detail: detail);
+        }
+    }
+    
     // 登录调用接口 直接进入设备列表controller
     public func login(username:String, pass:String, controller:UIViewController, faild faildBlock:@escaping (String, String) -> Void, successBlock:@escaping () -> Void) {
         self.controller = controller;
@@ -73,6 +122,7 @@ public class AXBSDK: NSObject {
             }
         }, login: {
             UserManager.share().style = .withOutLogin;
+            self.successLogin();
         });
         self.PushDevice(controller: controller);
     }
@@ -81,6 +131,7 @@ public class AXBSDK: NSObject {
         if loginSuccess != nil {
             loginSuccess!();
         }
+        checkShouldBind();
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: frameworkLoad), object: nil);
     }
     
