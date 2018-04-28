@@ -46,11 +46,11 @@
     };
     // 登录失败
     self.sdk.loginFaild = ^(NSString * msg, NSString * detailMsg) {
-        
+        NSLog(@"faile %@ \n %@", msg, detailMsg);
     };
     // 登录成功
     self.sdk.loginSuccess = ^{
-        
+        NSLog(@"success");
     };
     // 添加view
     self.sdk.deviceListBlock = ^(UIViewController * deviceVC) {
@@ -76,7 +76,6 @@
 
 - (void)login {
     [self.sdk loginWithUsername:@"yukari" pass:@"198611" controller:self faild:^(NSString * msg, NSString * detail) {
-        
     } successBlock:^{
         
     }];

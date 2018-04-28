@@ -26,8 +26,7 @@ public class AXBSDK: NSObject {
     }
     
     func checkShouldBind() {
-        FMDBHelp.share().getUserImeiList(resultBlock: { (arr) in
-            print("device list == \(arr)")
+        FMDBHelp.share().getUserListIMEI { (arr) in
             if arr.count > 0 {
                 if self.deviceBindOverBlock != nil {
                     self.deviceBindOverBlock!();
@@ -37,7 +36,6 @@ public class AXBSDK: NSObject {
                     self.deviceBindBlock!();
                 }
             }
-        }) {
         }
     }
     
@@ -64,18 +62,14 @@ public class AXBSDK: NSObject {
             print("请先登录")
             return;
         }
-        FMDBHelp.share().getUserImeiList(resultBlock: { (arr) in
+        FMDBHelp.share().getUserListIMEI { (arr) in
             if arr.count > 0 {
                 print("绑定数量超过一台");
                 if self.deviceBindOverBlock != nil {
                     self.deviceBindOverBlock!();
                 }
                 return;
-            } else {
-                
             }
-        }) {
-            print("---请先登录---")
         }
         let bind = AddNewDeviceViewController.init(nibName: "", bundle: bundleTool.share().returnXibBundle());
         let navc = UINavigationController.init(rootViewController: bind);
