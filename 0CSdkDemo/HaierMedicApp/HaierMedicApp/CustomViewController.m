@@ -8,6 +8,7 @@
 
 #import "CustomViewController.h"
 #import <anXingBaoSDK/anXingBaoSDK-Swift.h>
+#import "AFNetworking.h"
 
 @interface CustomViewController ()
 
@@ -24,8 +25,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // 监听返回的高度
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getheight:) name:@"CELLHEIGHT" object:nil];
     [self setsdk];
     [self login];
+}
+
+// 获取实际高度
+- (void)getheight:(NSNotification *)notification {
+    NSNumber *height = notification.object; // cgfloat
+    NSLog(@"height == %@",  notification.object);
 }
 
 - (void)setsdk {
@@ -54,7 +63,7 @@
     };
     // 添加view
     self.sdk.deviceListBlock = ^(UIViewController * deviceVC) {
-        [weakSelf setSDKDeviceView:deviceVC height:300];
+        [weakSelf setSDKDeviceView:deviceVC height:320];
     };
 }
 
@@ -74,8 +83,9 @@
     [sdk bindDeviceWithController:self];
 }
 
+
 - (void)login {
-    [self.sdk loginWithUsername:@"yukari" pass:@"198611" controller:self faild:^(NSString * msg, NSString * detail) {
+    [self.sdk loginWithUsername:@"13421121212" pass:@"123456" controller:self faild:^(NSString * msg, NSString * detail) {
     } successBlock:^{
         
     }];
