@@ -184,6 +184,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class UIViewController;
+@class NSMutableDictionary;
 
 SWIFT_CLASS("_TtC12anXingBaoSDK6AXBSDK")
 @interface AXBSDK : NSObject
@@ -193,6 +194,7 @@ SWIFT_CLASS("_TtC12anXingBaoSDK6AXBSDK")
 @property (nonatomic, copy) void (^ _Nullable deviceListBlock)(UIViewController * _Nonnull);
 @property (nonatomic, copy) void (^ _Nullable deviceBindBlock)(void);
 @property (nonatomic, copy) void (^ _Nullable deviceBindOverBlock)(void);
+@property (nonatomic, copy) void (^ _Nullable deviceLocationBlock)(NSMutableDictionary * _Nonnull);
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)apiKeyWithKey:(NSString * _Nonnull)key amapKey:(NSString * _Nonnull)amapKey;
 - (void)bindDeviceWithController:(UIViewController * _Nonnull)controller;

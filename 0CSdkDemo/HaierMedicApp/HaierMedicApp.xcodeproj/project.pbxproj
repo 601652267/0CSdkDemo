@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4153F3A208B62D8006BA142 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4153F39208B62D8006BA142 /* CustomViewController.m */; };
-		B4EB097A209BF22200E98BA1 /* anXingBaoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EB0979209BF22200E98BA1 /* anXingBaoSDK.framework */; };
+		B4E65F6E20A03B3D008A10DA /* anXingBaoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E65F6D20A03B3D008A10DA /* anXingBaoSDK.framework */; };
 		B4ED4FD620898EAC006E37D4 /* EBBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */; };
 		B4ED4FDF20899048006E37D4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FDE20899048006E37D4 /* Charts.framework */; };
 		B4ED4FE020899048006E37D4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B4ED4FDE20899048006E37D4 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -60,7 +60,7 @@
 		8E029BAB106CE35EC5D3FDE8 /* Pods-HaierMedicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HaierMedicApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HaierMedicApp/Pods-HaierMedicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B4153F38208B62D8006BA142 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		B4153F39208B62D8006BA142 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
-		B4EB0979209BF22200E98BA1 /* anXingBaoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = anXingBaoSDK.framework; sourceTree = "<group>"; };
+		B4E65F6D20A03B3D008A10DA /* anXingBaoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = anXingBaoSDK.framework; sourceTree = "<group>"; };
 		B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EBBannerView.xib; sourceTree = "<group>"; };
 		B4ED4FDE20899048006E37D4 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4ED4FE92089DB4C006E37D4 /* anXingBao.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = anXingBao.bundle; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4ED4FDF20899048006E37D4 /* Charts.framework in Frameworks */,
-				B4EB097A209BF22200E98BA1 /* anXingBaoSDK.framework in Frameworks */,
+				B4E65F6E20A03B3D008A10DA /* anXingBaoSDK.framework in Frameworks */,
 				F6ED6D3FBD126E890EA9CF32 /* Pods_HaierMedicApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +146,7 @@
 		B4FBDDFB20898900005C5F0C /* HaierMedicApp */ = {
 			isa = PBXGroup;
 			children = (
-				B4EB0979209BF22200E98BA1 /* anXingBaoSDK.framework */,
+				B4E65F6D20A03B3D008A10DA /* anXingBaoSDK.framework */,
 				B4FBDDFC20898901005C5F0C /* AppDelegate.h */,
 				B4ED4FD320898EAC006E37D4 /* EBBannerView.xib */,
 				B4FBDDFD20898901005C5F0C /* AppDelegate.m */,

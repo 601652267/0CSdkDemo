@@ -17,12 +17,13 @@ public class AXBSDK: NSObject {
     public var deviceListBlock:((UIViewController)->Void)? = nil; // 返回设备列表的controller 可以将其嵌套到自己自定义的controller
     public var deviceBindBlock:(()->Void)? = nil; // 可以绑定设备的回调
     public var deviceBindOverBlock:(()->Void)? = nil; // 绑定设备数量过多的回调
+    public var deviceLocationBlock:((NSMutableDictionary)->Void)? = nil; // 设备定位信息
 
     public override init() {
         super.init();
         NotificationCenter.default.addObserver(self, selector: #selector(AXBTokenError), name: NSNotification.Name(rawValue: tokenError), object: nil);
         NotificationCenter.default.addObserver(self, selector: #selector(checkShouldBind), name: NSNotification.Name(rawValue: refreshDeviceList), object: nil);
-
+        NotificationCenter.default.addObserver(self, selector: #selector(getLocation), name: NSNotification.Name(rawValue: "LOCATIONMSG"), object: nil);
     }
     
     func checkShouldBind() {
@@ -42,10 +43,21 @@ public class AXBSDK: NSObject {
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: tokenError), object: nil);
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: refreshDeviceList), object: nil);
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "LOCATIONMSG"), object: nil);
         controller = nil;
         loginFaild = nil;
         loginSuccess = nil;
         tokenFaild = nil;
+    }
+    
+    func getLocation(notica:Notification) {
+        if let arr = notica.object as? NSMutableArray, arr.count > 0 , self.deviceLocationBlock != nil {
+            for data in arr {
+                if let dic = data as? NSMutableDictionary {
+                    self.deviceLocationBlock!(dic);
+                }
+            }
+        }
     }
     
     //MARK:-
