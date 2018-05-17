@@ -89,7 +89,7 @@
 
 
 - (void)login {
-    [self.sdk loginWithUsername:@"13421121212" pass:@"123456" controller:self faild:^(NSString * msg, NSString * detail) {
+    [self.sdk loginWithUsername:@"15821890402" pass:@"123456" controller:self faild:^(NSString * msg, NSString * detail) {
     } successBlock:^{
         
     }];

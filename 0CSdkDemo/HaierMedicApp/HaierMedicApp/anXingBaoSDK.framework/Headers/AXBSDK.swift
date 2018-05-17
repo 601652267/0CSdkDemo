@@ -102,6 +102,7 @@ public class AXBSDK: NSObject {
     // MARK:退出登录
     public func loginOut() {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: loginOutTopic), object: nil);
+        UserManager.share().wirteNoCount();
     }
 
     //MARK:-
