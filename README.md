@@ -10,7 +10,7 @@
 
 ## 2、添加安行宝控制器到自己的界面
 ### 控制器内添加界面的api
-- (void)setSDKDeviceView:(UIViewController *)deviceVC height:(CGFloat)height {  
+-(void)setSDKDeviceView:(UIViewController *)deviceVC height:(CGFloat)height {  
     self.height = height;  
     self.view.backgroundColor = [UIColor whiteColor];  
     [self addChildViewController:deviceVC];  
@@ -32,7 +32,7 @@
     };
 
 // 隐藏添加设备的按钮
-- (void)hiddenNavigationBind
+-(void)hiddenNavigationBind
 {
     
 }
@@ -44,12 +44,12 @@
     };
    
 // 展示可以点击绑定设备的按钮
-- (void)setNavigationBind {
+-(void)setNavigationBind {
     
 }
 
 // 绑定设备
-- (void)bindDevice {
+-(void)bindDevice {
     self.sdk = [[AXBSDK alloc] init];
     [self.sdk bindDeviceWithController:self];
 }
@@ -73,8 +73,14 @@
         NSLog(@"get deivce location message ==== %@", dic);
     };
 
-
-
+## 4、sdk APNS设置
+在appdelegate 设置获取apns token
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Required
+    AXBSDK *sdk = [[AXBSDK alloc] init];
+    [sdk getAppApnsTokenWithDeviceToken:<#(NSData * _Nonnull)#>]
+   
+}
 
 
 
