@@ -1,5 +1,5 @@
 # 0CSdkDemo
 
 ## 1、初始化sdk
-
-`<hello world>`
+`<AXBSDK *sdk = [[AXBSDK alloc] init];
+    [sdk apiKeyWithKey:@"XXX" amapKey:@""];>`
