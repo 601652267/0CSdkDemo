@@ -66,9 +66,19 @@
         NSLog(@"success");
     };
     
+    实时定位信息 ["imei"(string), "isGps"(string), "laddress"(string), "location"(string), "steps"(string), "time".          (NSInteger)]
     self.sdk.deviceLocationBlock = ^(NSMutableDictionary *dic) {
-        // 实时定位信息 ["imei"(string), "isGps"(string), "laddress"(string), "location"(string), "steps"(string), "time".          (NSInteger)]
         NSLog(@"get deivce location message ==== %@", dic);
+    };
+    
+    绑定设备成功
+    self.sdk.deviceBindSuccessBlock = ^ (NSMutableDictionary *dic){
+        NSLog(@"deviceBindSuccessBlock - deviceinfo === %@", dic);
+    };
+    
+    解绑设备成功
+    self.sdk.deviceDeleteSuccessBlock = ^ (NSMutableDictionary *dic){
+        NSLog(@"deviceDeleteSuccessBlock - deviceinfo === %@", dic);
     };
 
 ## 4、sdk APNS设置
@@ -79,7 +89,32 @@
     [sdk getAppApnsTokenWithDeviceToken:<#(NSData * _Nonnull)#>]
     }
 
-
+## 5、点击警报推送
+    在appdelegate.m 添加
+    
+    - (void)setApnsMsg:(NSString *)msg {
+    AXBSDK *sdk = [[AXBSDK alloc] init];
+    [sdk getApnsMsgWithMsg:msg];
+    }
+    
+    在函数调用
+    - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSString *alertString = [userInfo valueForKey:@"extras"];
+    if (alertString == nil || [alertString isEqual:[NSNull null]]) {
+        NSDictionary *dic = [userInfo valueForKey:@"aps"];
+        if (dic != nil && ![dic isEqual:[NSNull null]]) {
+            NSString *newAlertString = [dic valueForKey:@"extras"];
+            if (newAlertString == nil || [newAlertString isEqual:[NSNull null]]) {
+                [self setApnsMsg:alertString];
+            }
+        }
+    } else {
+        [self setApnsMsg:alertString];
+    }
+    }
+    
+## 6、刷新设备
+    [self.sdk refreshList];
 
 
 
