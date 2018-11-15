@@ -66,8 +66,8 @@
         NSLog(@"success");
     };
     
-        self.sdk.deviceLocationBlock = ^(NSMutableDictionary *dic) {
-        // 实时定位信息 ["imei"(string), "isGps"(string), "laddress"(string), "location"(string), "steps"(string), "time"(NSInteger)]
+    self.sdk.deviceLocationBlock = ^(NSMutableDictionary *dic) {
+        // 实时定位信息 ["imei"(string), "isGps"(string), "laddress"(string), "location"(string), "steps"(string), "time".          (NSInteger)]
         NSLog(@"get deivce location message ==== %@", dic);
     };
 
