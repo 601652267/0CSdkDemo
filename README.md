@@ -3,11 +3,11 @@
 ## 1、初始化sdk
 
 ### 在要显示界面的控制器设置全局属性
-`@property (nonatomic, retain)AXBSDK *sdk;` 
+    @property (nonatomic, retain)AXBSDK *sdk;
   
 ### 初始化sdk
-`self.sdk = [[AXBSDK alloc] init];`  
-`[self.sdk apiKeyWithKey:@"XXX" amapKey:@""];`    
+    self.sdk = [[AXBSDK alloc] init];
+    [self.sdk apiKeyWithKey:@"XXX" amapKey:@""];   
 
 ## 2、添加安行宝控制器到自己的界面
 
