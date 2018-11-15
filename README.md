@@ -115,6 +115,8 @@
     
 ## 6、刷新设备
     [self.sdk refreshList];
+## 7、退出登录
+    [self.sdk loginOut];
 
 
 
