@@ -80,6 +80,23 @@
     self.sdk.deviceDeleteSuccessBlock = ^ (NSMutableDictionary *dic){
         NSLog(@"deviceDeleteSuccessBlock - deviceinfo === %@", dic);
     };
+    点击设备列表-警报列表-警报详细-体征数据的点击回调
+    // 点击警报 警报列表 体征返回imei
+    self.sdk.returnDeviceImei = ^ (NSMutableDictionary *dic){
+        NSLog(@"click - deviceinfo === %@", dic);
+        /*
+        格式是
+        {
+    click = alertDetail;
+    // alertDetail对应警报详细  alertList对应警报列表 sgin对应体征
+    imei = 865288030124957;
+    }
+        */
+     };
+     
+     设置是否进入体征详细 默认是flase
+     [self.sdk setPushSginConfigInto:true];
+
 
 ## 4、sdk APNS设置
     在appdelegate 设置获取apns token
